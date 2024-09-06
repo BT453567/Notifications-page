@@ -1,0 +1,256 @@
+:root {
+
+    /* Primary */
+
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+
+}
+
+@font-face {
+    font-family: 'plus-jakarta-sans';
+    src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--rose-50);
+    font-family: 'plus-jakarta-sans';
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark-grayish-blue);
+    min-height: 100vh;
+    background-color: var(--very-light-grayish-blue);
+    place-items: center;    
+}
+
+/* Utility Classes */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+.remove-a-styling {
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.unread {
+    background-color: var(--very-light-grayish-blue);
+}
+
+.dot {
+    display: inline-block;
+    margin-left: 7px;
+    height: 10px;
+    width: 10px;
+    background-color: var(--red);
+    border-radius: 50%;
+}
+
+/* Font Sizes */
+
+.fs-600 {
+    font-size: 1.4rem;
+}
+
+/* Font Colours */
+
+.fc-white {
+    color: var(--white);
+}
+
+.fc-grayish-blue {
+    color: var(--grayish-blue);
+}
+
+.fc-dark-grayish-blue {
+    color: var(--dark-grayish-blue);
+}
+
+.fc-very-dark-blue {
+    color: var(--very-dark-blue);
+}
+
+/* Font Weight */
+
+.fw-800 {
+    font-weight: 800;
+}
+
+/* Gap */
+
+.text-spacing {
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+.left-text-spacing-only {
+    margin-left: 10px;
+}
+
+.gap-5px {
+    gap: 5px;
+}
+
+.gap-10px {
+    gap: 10px;
+}
+
+.gap-20px {
+    gap: 20px;
+}
+
+/* Component Classes */   
+
+.notifications__wrapper {
+    padding: 1.8rem 2.2rem;
+    padding-bottom: 1.4rem;
+    width: 100%;
+    max-width: 45rem;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.notifications__header {
+
+    justify-content: space-between;
+}
+
+.notifications__badge {
+    padding: 5px 12px;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+
+.notifications__content-wrapper {
+    margin-top: 30px;
+    
+}
+
+.notifications__avatar-image {
+    height: 50px;
+    width: 50px;
+}
+
+.notifications__commment-image {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    
+}
+
+.notifications__item-wrapper {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.notifications__comment-container {
+    width: 100%;
+}
+
+.notifications__post-time {
+    color: var(--grayish-blue);
+}
+
+.notifications__private-message {
+    display: block;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: 5px;
+    color: inherit;
+}
+
+.notifications__post-name {
+    color: inherit;
+}
+
+@media (hover:hover) {
+
+    button:hover {
+        color: var(--blue);
+    }
+
+    a:hover {
+        color: var(--blue);
+    }
+
+    .notifications__private-message:hover {
+        color: inherit;
+        background-color: var(--light-grayish-blue-1);
+        border: 1px solid var(--light-grayish-blue-1);
+    }
+}
+
+@media (hover:none) {
+
+    button:active {
+        color: var(--blue);
+    }
+
+    a:active {
+        color: var(--blue);
+    }
+
+    .notifications__private-message:active {
+        color: inherit;
+        background-color: var(--light-grayish-blue-1);
+        border: 1px solid var(--light-grayish-blue-1);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .body {
+        display: block;
+    }
+
+    .notifications__wrapper {
+        max-width: none;
+        border-radius: 0px;
+        padding-inline: 1.5rem;
+    }
+
+}
