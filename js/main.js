@@ -6,43 +6,43 @@ let users = {
     101: {
         id: 101,
         name: 'Anna Kim',
-        avatar: '../assets/images/avatar-anna-kim.webp'
+        avatar: './assets/images/avatar-anna-kim.webp'
     },
 
     102: {
         id: 102,
         name: 'Nathan Peterson',
-        avatar: '../assets/images/avatar-nathan-peterson.webp'
+        avatar: './assets/images/avatar-nathan-peterson.webp'
     },
 
     103: {
         id: 103,
         name: 'Kimberly Smith',
-        avatar: '../assets/images/avatar-kimberly-smith.webp'
+        avatar: './assets/images/avatar-kimberly-smith.webp'
     },
 
     104: {
         id: 104,
         name: 'Rizky Hasanuddin',
-        avatar: '../assets/images/avatar-rizky-hasanuddin.webp'
+        avatar: './assets/images/avatar-rizky-hasanuddin.webp'
     },
 
     105: {
         id: 105,
         name: 'Jacob Thompson',
-        avatar: '../assets/images/avatar-jacob-thompson.webp'
+        avatar: './assets/images/avatar-jacob-thompson.webp'
     },
 
     106: {
         id: 106,
         name: 'Angela Gray',
-        avatar: '../assets/images/avatar-angela-gray.webp'
+        avatar: './assets/images/avatar-angela-gray.webp'
     },
 
     107: {
         id: 107,
         name: 'Mark Webber',
-        avatar: '../assets/images/avatar-mark-webber.webp'
+        avatar: './assets/images/avatar-mark-webber.webp'
     }
 }
 
@@ -74,7 +74,7 @@ let notifications = [
         isRead: true,
         userId: 103,
         context: {
-            picture: '../assets/images/image-chess.webp'
+            picture: './assets/images/image-chess.webp'
         }
     },
     {
