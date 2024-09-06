@@ -164,7 +164,7 @@ function generateNotifications() {
                 <div class="notifications__comment-container flex">
                     <div class="notifications__comment-text-wrapper flex column gap-5px">
                         <div>
-                            <a href="#" class="notifications__user-name remove-a-styling right-text-space-10px fw-800 fc-very-dark-blue">${user.name}</a>
+                            <a href="#" class="notifications__user-name remove-a-styling right-text-space-7px fw-800 fc-very-dark-blue">${user.name}</a>
                             <span>commented on your picture</span>
                             ${unreadDot}
                         </div>
@@ -180,7 +180,8 @@ function generateNotifications() {
             contentHTML = `
                 <div class="flex column gap-5px">
                     <div>
-                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="left-text-spacing-only">sent you a private message</span>${unreadDot}
+                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space-7px">${user.name}</a>
+                        <span>sent you a private message</span>${unreadDot}
                     </div>
                     <div>
                         <span class="notifications__post-time">${timeSinceNotification}</span>
@@ -205,7 +206,8 @@ function generateNotifications() {
             contentHTML = `
             <div class="flex column gap-5px">
                 <div>
-                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="left-text-spacing-only">followed you</span>${unreadDot}
+                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space-7px">${user.name}</a>
+                    <span>followed you</span>${unreadDot}
                 </div>
                 <div>
                     <span class="notifications__post-time">${timeSinceNotification}</span>
