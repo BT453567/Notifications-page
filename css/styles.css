@@ -190,6 +190,10 @@ body {
     width: 100%;
 }
 
+.notifications__comment-text-wrapper {
+    width: 100%;
+}
+
 .notifications__post-time {
     color: var(--grayish-blue);
 }
