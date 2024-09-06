@@ -121,13 +121,8 @@ body {
 
 /* Gap */
 
-.text-spacing {
-    margin-left: 10px;
-    margin-right: 7px;
-}
-
-.right-text-space-7px {
-    margin-right: 7px;
+.right-text-space {
+    margin-right: 4px;
 }
 
 .gap-5px {
