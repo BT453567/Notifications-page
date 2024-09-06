@@ -141,7 +141,8 @@ function generateNotifications() {
             contentHTML = `
                 <div class="flex column gap-5px">
                     <div>
-                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="text-spacing">left the group</span>
+                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space">${user.name}</a>
+                        <span class="right-text-space">left the group</span>
                         <a href="#" class="notifications__group-name remove-a-styling fw-800 fc-dark-grayish-blue">${x.context.groupName}</a>${unreadDot}
                     </div>
                     <div>
@@ -152,7 +153,8 @@ function generateNotifications() {
             contentHTML = `
                 <div class="flex column gap-5px">
                     <div>
-                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="text-spacing">reacted to your recent post</span>
+                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space">${user.name}</a>
+                        <span class="right-text-space">reacted to your recent post</span>
                         <a href="#" class="notifications__post-name remove-a-styling fw-800">${x.context.postName}</a>${unreadDot}
                     </div>
                     <div>
@@ -164,7 +166,7 @@ function generateNotifications() {
                 <div class="notifications__comment-container flex">
                     <div class="notifications__comment-text-wrapper flex column gap-5px">
                         <div>
-                            <a href="#" class="notifications__user-name remove-a-styling right-text-space-7px fw-800 fc-very-dark-blue">${user.name}</a>
+                            <a href="#" class="notifications__user-name remove-a-styling right-text-space fw-800 fc-very-dark-blue">${user.name}</a>
                             <span>commented on your picture</span>
                             ${unreadDot}
                         </div>
@@ -180,7 +182,7 @@ function generateNotifications() {
             contentHTML = `
                 <div class="flex column gap-5px">
                     <div>
-                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space-7px">${user.name}</a>
+                        <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space">${user.name}</a>
                         <span>sent you a private message</span>${unreadDot}
                     </div>
                     <div>
@@ -195,7 +197,8 @@ function generateNotifications() {
             contentHTML = `
             <div class="flex column gap-5px">
                 <div>
-                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="text-spacing">has joined your group</span>
+                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space">${user.name}</a>
+                    <span class="right-text-space">has joined your group</span>
                     <a href="#" class="notifications__group-name remove-a-styling fw-800 fc-dark-grayish-blue">${x.context.groupName}</a>${unreadDot}
                 </div>
                 <div>
@@ -206,7 +209,7 @@ function generateNotifications() {
             contentHTML = `
             <div class="flex column gap-5px">
                 <div>
-                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space-7px">${user.name}</a>
+                    <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue right-text-space">${user.name}</a>
                     <span>followed you</span>${unreadDot}
                 </div>
                 <div>
