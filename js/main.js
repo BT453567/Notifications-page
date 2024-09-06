@@ -164,7 +164,9 @@ function generateNotifications() {
                 <div class="notifications__comment-container flex">
                     <div class="notifications__comment-text-wrapper flex column gap-5px">
                         <div>
-                            <a href="#" class="notifications__user-name remove-a-styling fw-800 fc-very-dark-blue">${user.name}</a><span class="left-text-spacing-only">commented on your picture</span>${unreadDot}
+                            <a href="#" class="notifications__user-name remove-a-styling right-text-space-10px fw-800 fc-very-dark-blue">${user.name}</a>
+                            <span>commented on your picture</span>
+                            ${unreadDot}
                         </div>
                         <div>
                             <span class="notifications__post-time">${timeSinceNotification}</span>
