@@ -171,7 +171,7 @@ function generateNotifications() {
                         </div>
                     </div>
                     <div>
-                        <a href="#"><img class="notifications__commment-image" src="${x.context.picture}"></img></a>
+                        <a href="#"><img class="notifications__commment-image" src="${x.context.picture}" alt=""></img></a>
                     </div>
                 </div>`;
         } else if (x.type === 'message') {
@@ -216,7 +216,7 @@ function generateNotifications() {
         return `
         <div class="${itemWrapperClass}">
             <div>
-                <img class="notifications__avatar-image" src="${user.avatar}"> </img>
+                <img class="notifications__avatar-image" src="${user.avatar}" alt="avatar of ${user.name}"> </img>
             </div>
             ${contentHTML}
         </div>`;
