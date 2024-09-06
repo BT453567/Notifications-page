@@ -50,7 +50,7 @@ let notifications = [
     {
         id: 1,
         type: 'left-group',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-06-03T14:30:00Z',
         isRead: true,
         userId: 101,
         context: {
@@ -60,7 +60,7 @@ let notifications = [
     {
         id: 2,
         type: 'react',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-06-04T14:30:00Z',
         isRead: true,
         userId: 102,
         context: {
@@ -70,7 +70,7 @@ let notifications = [
     {
         id: 3,
         type: 'comment',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-07-04T14:30:00Z',
         isRead: true,
         userId: 103,
         context: {
@@ -80,7 +80,7 @@ let notifications = [
     {
         id: 4,
         type: 'message',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-08-01T14:30:00Z',
         isRead: true,
         userId: 104,
         context: {
@@ -91,7 +91,7 @@ let notifications = [
     {
         id: 5,
         type: 'join-group',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-08-10T14:30:00Z',
         isRead: false,
         userId: 105,
         context: {
@@ -101,7 +101,7 @@ let notifications = [
     {
         id: 6,
         type: 'follow',
-        timestamp: '2024-09-04T14:30:00Z',
+        timestamp: '2024-08-25T14:30:00Z',
         isRead: false,
         userId: 106,
     },
@@ -228,26 +228,28 @@ function timeSince(timestamp) {
     const notificationDate = new Date(timestamp);
     const diffInSeconds = Math.floor((now - notificationDate) / 1000);
 
+    const pluralise = (count, singular, plural) => count === 1 ? singular : plural;
+
     if (diffInSeconds < 60) {
-        return `${diffInSeconds} seconds ago`;
+        return `${diffInSeconds} ${pluralise(diffInSeconds, 'second', 'seconds')} ago`;
     } else if (diffInSeconds < 3600) { // 60 * 60
         const minutes = Math.floor(diffInSeconds / 60);
-        return `${minutes} minutes ago`;
+        return `${minutes} ${pluralise(minutes, 'minute', 'minutes')} ago`;
     } else if (diffInSeconds < 86400) { // 60 * 60 * 24
         const hours = Math.floor(diffInSeconds / 3600);
-        return `${hours} hours ago`;
+        return `${hours} ${pluralise(hours, 'hour', 'hours')} ago`;
     } else if (diffInSeconds < 604800) { // 60 * 60 * 24 * 7
         const days = Math.floor(diffInSeconds / 86400);
-        return `${days} days ago`;
+        return `${days} ${pluralise(days, 'day', 'days')} ago`;
     } else if (diffInSeconds < 2592000) { // 60 * 60 * 24 * 30 (approx)
         const weeks = Math.floor(diffInSeconds / 604800);
-        return `${weeks} weeks ago`;
+        return `${weeks} ${pluralise(weeks, 'week', 'weeks')} ago`;
     } else if (diffInSeconds < 31536000) { // 60 * 60 * 24 * 365 (approx)
         const months = Math.floor(diffInSeconds / 2592000);
-        return `${months} months ago`;
+        return `${months} ${pluralise(months, 'month', 'months')} ago`;
     } else {
         const years = Math.floor(diffInSeconds / 31536000);
-        return `${years} years ago`;
+        return `${years} ${pluralise(years, 'year', 'years')} ago`;
     }
 }
 
